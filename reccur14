@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-float sum(int n, float x)
+double sum(int n, double x)
 {
     if (n == 0)
         return 0;
@@ -14,7 +14,7 @@ void Solve()
 {
     Task("Reccur14");
     int n;
-    float x;
+    double x;
     pt >> n >> x;
     pt << sum(n , x);
 }
