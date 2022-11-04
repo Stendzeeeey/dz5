@@ -1,0 +1,22 @@
+дано число n. найти наибольшую цифру.
+#include "pt4.h"
+using namespace std;
+
+int maximum(int k, int& m) {
+    int cifra;
+    if (k > 0) {
+        cifra = k % 10;
+        if (cifra > m) m = cifra;
+        return maximum(k / 10, m);
+    }
+    
+}
+
+void Solve()
+{
+    Task("Reccur4");
+    int n, m = 0;
+    pt >> n;
+    maximum(n, m);
+    pt << m;
+}
