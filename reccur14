@@ -1,0 +1,20 @@
+написать рекурисию для нахождения суммы s=Σ(x^n/n)
+#include "pt4.h"
+#include <cmath>
+using namespace std;
+
+float sum(int n, float x)
+{
+    if (n == 0)
+        return 0;
+    return pow(x, n) + sum(n - 1, x);
+}
+
+void Solve()
+{
+    Task("Reccur14");
+    int n;
+    float x;
+    pt >> n >> x;
+    pt << sum(n , x);
+}
